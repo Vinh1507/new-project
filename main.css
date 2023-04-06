@@ -1,0 +1,33 @@
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.form1 {
+    display: block;
+    width: 300px;
+    margin: 50px auto;
+}
+.form-group {
+    display: flex;
+}
+
+input {
+    width: 100%;
+    border: 1px solid black;
+    margin-top: 12px;
+    padding: 8px 12px;
+}
+
+input + input {
+    margin-left: 8px;
+}
+
+#btn {
+    color: white;
+    background-color: blue;
+    width: 100%;
+    padding: 8px;
+    margin-top: 8px;
+}
