@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <div class="form1">
+        <div class="form-group">
+            <input type="text" name="" placeholder="First name" id="firstname">
+            <input type="text" name="" placeholder="Last name" id="lastname">
+        </div>
+        <div class="form-group">
+            <input type="text" name="" placeholder="Enter your email" id="email">
+
+        </div>
+        <div class="form-group">
+            <input type="text" name="" placeholder="Reenter your email" id="email2">
+
+        </div>
+        <div class="form-group">
+            <input type="text" name="" placeholder="new password" id="pass">
+        </div>
+        <button id="btn">Sign in</button>
+    </div>
+    <script>
+        let pass = document.querySelector('#pass');
+        let btn = document.querySelector('#btn');
+        function check(value) {
+            let regex = /[^0-9]/;
+            if(value && !regex.test(value) && value.length >= 8){
+                alert('Mat khau hop le');
+                return true;
+            }
+            else{
+                alert('Mat khau khong hop le');
+                return false;
+            }
+        }
+        btn.onclick = function() {
+            alert(pass.value)
+            if(check(pass.value)){
+                alert('Thanh cong');
+            }
+            else{
+                alert('That bai');
+            }
+        }
+    </script>
+</body>
+</html>
